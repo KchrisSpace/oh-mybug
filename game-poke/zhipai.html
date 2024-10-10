@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>game-poke</title>
+    <link rel="stylesheet" href="./zhipai.css">
+    
+</head>
+
+<body>
+    <h1 class="game-title">纸牌游戏</h1>
+    <div class="game-container">
+        <div class="game-container-info">
+            <div class="game-info">
+                时间: <span id="timeremain">50</span>
+            </div>
+            <div class="game-info">
+                点击: <span id="clickcount">0</span>
+            </div>
+        </div>
+        <!-- 卡牌 -->
+       <div class="cards">
+        
+        <div class="card" data-number="8" data-turn="back" onclick="handclick(this)">
+            <div class="card-back card-face">
+            </div>
+            <div class="card-front card-face">
+                <div class="card red" data-value="8">8</div>
+            </div>
+        </div>
+        
+        
+       </div>
+    </div>
+    <script src="./game.js"></script>
+</body>
+
+</html>

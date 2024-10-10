@@ -1,0 +1,121 @@
+@font-face {
+    font-family: 'spider';
+    src: url(../别低头王冠会掉.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'caomei';
+    src: url(../草莓奶酪软糖体.ttf) format('truetype');
+}
+
+html {
+    font-family: 'spider', serif;
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    color: aqua;
+
+}
+
+body {
+    font-family: caomei;
+    margin: 0;
+    background: radial-gradient(#390888, #03042b)
+}
+
+* {
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.card-back {
+    width: 230px;
+    height: 150px;
+
+    border-radius: 30px;
+
+    background: url("https://img.zcool.cn/community/015b315cfe3833a801205e4bf5bfc1.jpg@2o.jpg");
+    background-size: cover;
+    /* display: none; */
+    /* transform: rotateY(180deg); */
+}
+
+.card-front {
+
+    /* font-size: 30px; */
+    background-color: #dfd7d7;
+    border-color: #732727;
+    /* align-items: center; */
+
+    color: #03042b;
+    transform: rotateY(180deg);
+
+}
+
+.game-title {
+    text-align: center;
+}
+
+.game-container {
+  
+display: grid;
+    /* grid-template-columns: repeat(8,auto); */
+
+    gap: 30px;
+    perspective: 500px;
+}
+
+
+
+.game-info {
+    grid-column: 1/-1;
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+}
+.game-container-info{
+ 
+        gap: 30px;
+        perspective: 500px;
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 20px;
+    justify-content: flex-start;
+}
+.card {
+    position: relative;
+    height: 230px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+    font-size: 80px;
+
+}
+
+
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border-width: 2px;
+    overflow: hidden;
+    border-style: solid;
+    backface-visibility: hidden;
+    transition: transform 700ms ease-in-out;
+}
+
+/* .card:hover .card-front {
+    transform: rotateY(0deg);
+}
+
+.card:hover .card-back {
+    transform: rotateY(180deg);
+} */
